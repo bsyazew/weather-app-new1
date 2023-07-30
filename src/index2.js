@@ -15,7 +15,13 @@ let days = [
 
 let day = days[rn.getDay()];
 let hours = rn.getHours();
+if (hours < 10) {
+  hours = `0${hours}`;
+}
 let minutes = rn.getMinutes();
+if (minutes < 10) {
+  minutes = `0${minutes}`;
+}
 
 now.innerHTML = `${day}, ${hours}:${minutes}`;
 //

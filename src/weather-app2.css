@@ -10,7 +10,7 @@ body {
 .deg {
   position: relative;
   bottom: 30px;
-  left: 20px;
+  left: 60px;
   font-size: 60px;
   line-height: 10px;
 }
@@ -18,7 +18,7 @@ body {
 .deg-celcius-farenheit {
   position: relative;
   bottom: 60px;
-  left: 20px;
+  left: 60px;
   font-size: 20px;
   line-height: 10px;
   text-decoration: none;
@@ -27,7 +27,7 @@ body {
 .todays-weather-description {
   position: relative;
   bottom: 30px;
-  right: 37px;
+  right: 0px;
   font-size: 50px;
   line-height: 10px;
 }
