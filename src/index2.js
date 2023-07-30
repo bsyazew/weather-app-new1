@@ -54,21 +54,13 @@ function searchCity(city) {
 
 function handleSubmit(event) {
   event.preventDefault();
-  //let searchInput = document.querySelector("#exampleFormControlInput1");
-
-  //let place = document.querySelector("#place");
-  //if (searchInput.value) {
-  ////place.innerHTML = `${searchInput.value}`;
-  //} else {
-  ////place.innerahtml = null;
-  //  alert(`Please enter city`);
-
+  
   function getCurrentLocation(event) {
     event.preventDefault();
     navigator.geolocation.getCurrentPosition(searchLocation);
   }
 
-  let city = document.querySelector("#exampleFormControlInput1").value;
+  let city = document.querySelector("#city-input").value;
   searchCity(city);
 }
 // COME BACK O IN WEEK 6
@@ -88,4 +80,4 @@ form.addEventListener("submit", handleSubmit);
 
 //let apiUrl ="https://api.openweathermap.org/data/2.5/weather?q=New York&units=metric";
 
-searchCity("New York");
+searchCity("Ethiopia");
