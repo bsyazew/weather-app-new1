@@ -17,8 +17,24 @@ body {
   font-size: 20px;
   line-height: 10px;
   text-decoration: none;
+  color: rgb(73, 160, 232);
+  
+}
+
+.weather-temp .active {
+  color: black;
+  cursor: default;
+}
+
+.weather-temp .active:hover {
+  text-decoration: none;
+}
+
+#celsius-link {
+  text-decoration: none;
   color: black;
 }
+
 .todays-weather-description {
   position: relative;
   bottom: 10px;
