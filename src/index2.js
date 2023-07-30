@@ -19,9 +19,9 @@ let minutes = rn.getMinutes();
 
 now.innerHTML = `${day}, ${hours}:${minutes}`;
 //
-function showWeather(response) {
+function showTodaystemp(response) {
   document.querySelector("#place").innerHTML = response.data.name;
-  document.querySelector("#temperature").innerHTML = Math.round(
+  document.querySelector("#todaays-temperature").innerHTML = Math.round(
     response.data.main.temp
   );
   document.querySelector("#humidity").innerHTML = response.data.main.humidity;
@@ -34,7 +34,7 @@ function showWeather(response) {
 function searchCity(city) {
   let apiKey = "bb0df6985c2eab6a171d64a6bacbb4e1";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
-  axios.get(apiUrl).then(showWeather);
+  axios.get(apiUrl).then(showTodaystemp);
 }
 
 function handleSubmit(event) {
@@ -73,11 +73,4 @@ form.addEventListener("submit", handleSubmit);
 
 //let apiUrl ="https://api.openweathermap.org/data/2.5/weather?q=New York&units=metric";
 
-//
-//let temperature = Math.round(response.data.main.temp);
-//let temperatureElement = document.querySelector("#temperature");
-//let description = document.querySelector(`#descript`);
-//temperatureElement.innerHTML = `${temperature}℃`;
-//description.innerHTML = response.data.wether[0].description;
-//}
 searchCity("New York");
