@@ -34,7 +34,7 @@ function showTodaystemp(response) {
   celsiusTemperature = response.data.main.temp;
   iconElement.setAttribute("alt", response.data.weather[0].description);
 
-  document.querySelector("#place").innerHTML = response.data.name;
+  document.querySelector("#displayed-city").innerHTML = response.data.name;
   document.querySelector("#todays-temperature").innerHTML =
     Math.round(celsiusTemperature);
   document.querySelector("#humidity").innerHTML = response.data.main.humidity;
@@ -62,22 +62,11 @@ function handleSubmit(event) {
   let city = document.querySelector("#city-input").value;
   searchCity(city);
 }
-// COME BACK O IN WEEK 6
-//function searchLocation(position) {
-// let apiKey = "bb0df6985c2eab6a171d64a6bacbb4e1";
-//let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=metric`;
-//axios.get(apiUrl).then(showWeather);}
 
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
 
-function showCelsiusTemperature(event) {
-  event.preventDefault();
-  let temperatureElement = document.querySelector("#todays-temperature");
-  temperatureElement.innerHTML = Math.round(celsiusTemperature);
-  celsiusLink.classList.add("active");
-  fahrenheitLink.classList.remove("active");
-}
+
 function showFahrenheitTemperature(event) {
   event.preventDefault();
   celsiusLink.classList.remove("active");
@@ -87,6 +76,14 @@ function showFahrenheitTemperature(event) {
 
   let temperatureElement = document.querySelector("#todays-temperature");
   temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
+}
+
+function showCelsiusTemperature(event) {
+  event.preventDefault();
+  let temperatureElement = document.querySelector("#todays-temperature");
+  temperatureElement.innerHTML = Math.round(celsiusTemperature);
+  celsiusLink.classList.add("active");
+  fahrenheitLink.classList.remove("active");
 }
 
 let celsiusTemperature = null;
