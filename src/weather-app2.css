@@ -9,40 +9,26 @@ body {
 .degrees {
   position: relative;
   bottom: 150px;
-  left: 60px;
+  left: 90px;
   font-size: 60px;
 }
 
 .deg-celsius {
   position: relative;
   bottom: 190px;
-  left: 60px;
+  left: 90px;
   font-size: 20px;
-  line-height: 10px;
+ 
 }
 
-.weather-temp .active {
-  color: black;
-  cursor: default;
-  text-decoration: none;
-}
-
-.weather-temp .active:hover {
-  text-decoration: none;
-}
-
-
-
-#celsius-link {
-  text-decoration: none;
-}
 
 .todays-weather-description {
   position: relative;
-  bottom: 10px;
+  bottom: 50px;
   right: 20px;
   font-size: 50px;
   line-height: 10px;
+  width: 120px;
 }
 
 #forecast-icon {
@@ -50,15 +36,13 @@ body {
   text-align: center;
 }
 
-#humidity {
-  display: inline-block;
-}
+
 
 ul.features {
   list-style: none;
   position: relative;
-  bottom: 100px;
-  left: 250px;
+ 
+  left: 300px;
   font-size: 17px;
 }
 
@@ -93,6 +77,7 @@ ul.features {
   position: relative;
   left: 0px;
   top: 10px;
+  
 }
 
 .bar {
@@ -107,14 +92,15 @@ ul.features {
 .city {
   font-size: 40px;
   text-align: right;
-  padding: 30px;
+padding: 20px;
   left: 300px;
   margin-top: 20px;
 }
 
 .today {
-  font-size: 17px;
+  font-size: 20px;
   text-transform: capitalize;
+  padding: 10px;
 }
 
 .weather-forecast {
@@ -122,11 +108,11 @@ ul.features {
 }
 
 .forecast-dates {
-  opacity: 0.5;
+ color: rgb(125, 171, 200)
 }
 
 .forecast-temp-min {
-  opacity: 0.5;
+ color: rgb(125, 171, 200)
 }
 
 .col-2 {
