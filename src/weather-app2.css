@@ -62,10 +62,12 @@ ul.features {
 .btn {
   padding: 10px;
   width: 150px;
-}
+  }
 
 .link {
   color: rgb(125, 171, 200);
+  padding-left: 20px;
+
 }
 
 .weather-app-wrapper {
@@ -104,15 +106,22 @@ padding: 20px;
 }
 
 .weather-forecast {
-  margin-top: 20px;
+  margin-top: -150px;
 }
 
 .forecast-dates {
- color: rgb(125, 171, 200)
+ color: rgb(125, 171, 200);
+ 
 }
 
 .forecast-temp-min {
- color: rgb(125, 171, 200)
+ color: rgb(125, 171, 200);
+ font-size: smaller;
+ 
+}
+
+.forecast-temp-max {
+   font-size: smaller;
 }
 
 .col-2 {
