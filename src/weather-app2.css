@@ -13,7 +13,7 @@ body {
   font-size: 60px;
 }
 
-.deg-celsius-fahrenheit {
+.deg-celsius {
   position: relative;
   bottom: 190px;
   left: 60px;
@@ -31,9 +31,7 @@ body {
   text-decoration: none;
 }
 
-#fahrenheit-link {
-  text-decoration: none;
-}
+
 
 #celsius-link {
   text-decoration: none;

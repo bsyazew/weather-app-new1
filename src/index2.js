@@ -26,15 +26,15 @@ if (minutes < 10) {
 now.innerHTML = `${day}, ${hours}:${minutes}`;
 
 function formatDay(timestamp) {
-let date = new Date(timestamp * 1000);
-let day = date.getDay();
-let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  let date = new Date(timestamp * 1000);
+  let day = date.getDay();
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 
-return days[day];
+  return days[day];
 }
 
-function getForecast(coordinates){
-   let apiKey = "bb0df6985c2eab6a171d64a6bacbb4e1";
+function getForecast(coordinates) {
+  let apiKey = "bb0df6985c2eab6a171d64a6bacbb4e1";
   let apiURL = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
   console.log(apiURL);
   axios.get(apiURL).then(displayForecast);
@@ -59,7 +59,7 @@ function showTodaystemp(response) {
   document.querySelector("#description").innerHTML =
     response.data.weather[0].description;
 
-    getForecast(response.data.coord);
+  getForecast(response.data.coord);
 }
 
 function searchCity(city) {
@@ -88,44 +88,40 @@ function displayForecast(response) {
 
   let forecastElement = document.querySelector("#forecast");
   let forecastHTML = `<div class="row">`;
-  
-  forecast.forEach(function(forecastDay, index){
+
+  forecast.forEach(function (forecastDay, index) {
     if (index < 6) {
       forecastHTML =
         forecastHTML +
         `
             <div class="col-2">
-              <p style="display: inline" class="forecast-dates">${formatDay(forecastDay.dt)}</p>
+              <p style="display: inline" class="forecast-dates">${formatDay(
+                forecastDay.dt
+              )}</p>
                <div>
                
                     <img
-                    src="https://openweathermap.org/img/wn/${forecastDay.weather[0].icon}@2x.png" 
+                    src="https://openweathermap.org/img/wn/${
+                      forecastDay.weather[0].icon
+                    }@2x.png" 
                     alt="Clouds"
                     
                     id="forecast-icon"></img></div>
               <div style="display: block" class="forecast-temp">
-                <span class="forecast-temp-max"> ${Math.round(forecastDay.temp.max)}° </span>
-                <span class="forecast-temp-min" >${Math.round(forecastDay.temp.min)}°</span>
+                <span class="forecast-temp-max"> ${Math.round(
+                  forecastDay.temp.max
+                )}° </span>
+                <span class="forecast-temp-min" >${Math.round(
+                  forecastDay.temp.min
+                )}°</span>
               </div>
               
             </div>`;
     }
-
-  })
+  });
 
   forecastHTML = forecastHTML + `</div>`;
   forecastElement.innerHTML = forecastHTML;
-}
-
-function showFahrenheitTemperature(event) {
-  event.preventDefault();
-  celsiusLink.classList.remove("active");
-  fahrenheitLink.classList.add("active");
-
-  let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
-
-  let temperatureElement = document.querySelector("#todays-temperature");
-  temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
 }
 
 function showCelsiusTemperature(event) {
@@ -133,16 +129,8 @@ function showCelsiusTemperature(event) {
   let temperatureElement = document.querySelector("#todays-temperature");
   temperatureElement.innerHTML = Math.round(celsiusTemperature);
   celsiusLink.classList.add("active");
-  fahrenheitLink.classList.remove("active");
 }
 
 let celsiusTemperature = null;
 
-let fahrenheitLink = document.querySelector("#fahrenheit-link");
-fahrenheitLink.addEventListener("click", showFahrenheitTemperature);
-
-let celsiusLink = document.querySelector("#celsius-link");
-celsiusLink.addEventListener("click", showCelsiusTemperature);
-
 searchCity("Ethiopia");
-
