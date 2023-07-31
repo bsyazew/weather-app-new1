@@ -9,22 +9,37 @@ body {
 .degrees {
   position: relative;
   bottom: 150px;
-  left: 90px;
+  left: 60px;
   font-size: 60px;
 }
 
 .deg-celsius {
   position: relative;
   bottom: 190px;
-  left: 90px;
+  left: 60px;
   font-size: 20px;
   line-height: 10px;
 }
 
+.weather-temp .active {
+  color: black;
+  cursor: default;
+  text-decoration: none;
+}
+
+.weather-temp .active:hover {
+  text-decoration: none;
+}
+
+
+
+#celsius-link {
+  text-decoration: none;
+}
 
 .todays-weather-description {
   position: relative;
-  bottom: 50px;
+  bottom: 10px;
   right: 20px;
   font-size: 50px;
   line-height: 10px;
@@ -98,7 +113,7 @@ ul.features {
 }
 
 .today {
-  font-size: 20px;
+  font-size: 17px;
   text-transform: capitalize;
 }
 
@@ -107,11 +122,11 @@ ul.features {
 }
 
 .forecast-dates {
- color: rgb(125, 171, 200)
+  opacity: 0.5;
 }
 
 .forecast-temp-min {
- color: rgb(125, 171, 200)
+  opacity: 0.5;
 }
 
 .col-2 {
