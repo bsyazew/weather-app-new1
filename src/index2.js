@@ -66,6 +66,34 @@ function handleSubmit(event) {
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
 
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+  let forecastHTML = `<div class="row">`;
+  let days = ["Thur", "Fri", "Sat", "Sun"];
+  days.forEach(function(day){
+      forecastHTML =
+        forecastHTML +
+        `
+            <div class="col-2">
+              <p style="display: inline" class="forecast-dates">${day}</p>
+               <div>
+                    <img
+                    src="https://openweathermap.org/img/wn/10d@2x.png" 
+                    alt="Clouds"
+                    
+                    id="forecast-icon"></img></div>
+              <div style="display: block" class="forecast-temp">
+                <span class="forecast-temp-max"> 15° </span>
+                <span class="forecast-temp-min" >12°</span>
+              </div>
+              
+            </div>`;
+
+  })
+
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
 
 function showFahrenheitTemperature(event) {
   event.preventDefault();
@@ -95,3 +123,4 @@ let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", showCelsiusTemperature);
 
 searchCity("Ethiopia");
+displayForecast();
