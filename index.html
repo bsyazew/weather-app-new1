@@ -28,77 +28,72 @@
   <body>
     <div class="container mt-4">
       <div class="weather-app-wrapper">
-      <div class="card">
-        <div class="card-body">
-          <div class="bar">
-            <div class="mb-3">
-              <div class="row">
-                <div class="col-6">
-                  <form id="search-form">
-                    <input
-                      type="text"
-                      class="form-control"
-                      id="city-input"
-                      placeholder="Enter City"
-                      autocomplete="off"
-                      autofocus="on"
-                    />
-                    <div class="col-3">
-                      <button type="sbumit" class="btn btn-dark btn-1">
-                        Search
-                      </button>
-                    </div>
-                  
-                  </form>
+        <div class="card">
+          <div class="card-body">
+            <div class="bar">
+              <div class="mb-3">
+                <div class="row">
+                  <div class="col-6">
+                    <form id="search-form">
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="city-input"
+                        placeholder="Enter City"
+                        autocomplete="off"
+                        autofocus="on"
+                      />
+                      <div class="col-3">
+                        <button type="sbumit" class="btn btn-dark btn-1">
+                          Search
+                        </button>
+                      </div>
+                    </form>
+                  </div>
                 </div>
               </div>
             </div>
-            
-          </div>
 
-          <div class="city" id="displayed-city">new york</div>
-          <div class="today">Monday, 12:23</div>
-          <div class="today" id="description">clouds</div>
-         
-          <div class="col-6">
-            <div class="weather-temp">
-            <ul class="features">
-              <li>Humidity: <span id="humidity">33</span>%</li>
-              <li>Wind: <span id="wind">33</span>Km/H</li>
-            </ul>
-            <ul id="temp">
-              <li>
-                  <div>
-                    <img
-                    src="https://openweathermap.org/img/wn/10d@2x.png" 
-                    alt="Clouds"
-                    class= "todays-weather-description"
-                    id="icon"></img></div>
-                    
-                <span class="degrees" id="todays-temperature">90</span>
-                <span class="deg-celsius">℃ </a></span>
-               
-              </li>
-            </ul>
-          </div>
-          </div>
-        
-         
-          <div class="weather-forecast" id="forecast">
-          
+            <div class="city" id="displayed-city">new york</div>
+            <div class="today">Monday, 12:23</div>
+            <div class="today" id="description">clouds</div>
+
+            <div class="col-6">
+              <div class="weather-temp">
+                <ul class="features">
+                  <li>Humidity: <span id="humidity">33</span>%</li>
+                  <li>Wind: <span id="wind">33</span>Km/H</li>
+                </ul>
+                <ul id="temp">
+                  <li>
+                    <div>
+                      <img
+                        src="https://openweathermap.org/img/wn/10d@2x.png"
+                        alt="Clouds"
+                        class="todays-weather-description"
+                        id="icon"
+                      />
+                    </div>
+
+                    <span class="degrees" id="todays-temperature">90</span>
+                    <span class="deg-celsius">℃</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="weather-forecast" id="forecast"></div>
           </div>
         </div>
       </div>
-      </div>
       <div class="footer">
-      <a
-        href="https://github.com/bsyazew/weather-app-new1"
-        target="_blank"
-        class="link"
-        >Open-source code</a
-      >, by Bethlehem Yazew
+        <a
+          href="https://github.com/bsyazew/weather-app-new1"
+          target="_blank"
+          class="link"
+          >Open-source code</a
+        >, by Bethlehem Yazew
       </div>
-    </div>
     </div>
 
     <script src="../src/index2.js"></script>
