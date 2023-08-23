@@ -134,3 +134,85 @@ ul.features {
 .footer {
   text-align: center;
 }
+
+@media (max-width: 786px) {
+ 
+
+  ul.features {
+    list-style: none;
+    position: relative;
+    left: 150px;
+    font-size: 14px;
+    font-family: var(--body-font);
+  }
+
+  .today {
+    font-size: 15px;
+    
+  }
+
+  .todays-weather-description {
+    font-size: 15px;
+  }
+  .city {
+    font-size: 25px;
+    padding: 10px;
+  }
+  .btn-1 {
+    width: 90px;
+    box-shadow: 3px 4px 0 #4141416d;
+    border-radius: 5px;
+    
+  }
+
+
+  #forecast-icon {
+  width: 40px;
+  text-align: center;
+}
+.forecast-temp-max {
+  font-size: 13px;
+}
+.forecast-temp-min {
+  font-size: 13px;
+}
+.forecast-dates {
+  color: var(--primary-color);
+  text-shadow: 0.3px 0.3px 0 #020202;
+  font-size: 11px;
+}
+#icon {
+  width: 90px;
+}
+.degrees {
+ 
+  font-size: 50px;
+  
+  left: 60px;
+}
+ .deg-celsius {
+    font-size: 15px;
+    left: 60px;
+  }
+  .today {
+  
+  margin-top: 20px;
+ 
+}
+.btn-1 {
+  max-width: 80px;
+  
+}
+#search-form {
+  max-width: 150px;
+}
+
+.btn {
+  font-size: 12px;
+  max-width: 70px;
+}
+#city-input {
+  
+  font-size: 12px;
+}
+}
