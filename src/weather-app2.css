@@ -1,6 +1,5 @@
 :root {
   --primary-color: black;
-
 }
 
 body {
@@ -23,9 +22,7 @@ body {
   bottom: 190px;
   left: 90px;
   font-size: 20px;
- 
 }
-
 
 .todays-weather-description {
   position: relative;
@@ -41,12 +38,10 @@ body {
   text-align: center;
 }
 
-
-
 ul.features {
   list-style: none;
   position: relative;
- 
+
   left: 300px;
   font-size: 17px;
 }
@@ -67,13 +62,12 @@ ul.features {
 .btn {
   padding: 10px;
   width: 150px;
-  box-shadow: 3px  4px 0 #323131;;
-  }
+  box-shadow: 3px 4px 0 #323131;
+}
 
 .link {
   color: var(--primary-color);
   padding-left: 20px;
-
 }
 
 .weather-app-wrapper {
@@ -87,7 +81,6 @@ ul.features {
   top: 10px;
   background: var(--primary-color);
   border-color: var(--primary-color);
-  
 }
 
 .bar {
@@ -95,7 +88,7 @@ ul.features {
 }
 .card {
   padding: 30px;
-  border: solid 5px ;
+  border: solid 5px;
   border-color: var(--primary-color);
   border-radius: 50px;
 }
@@ -103,7 +96,7 @@ ul.features {
 .city {
   font-size: 40px;
   text-align: right;
-padding: 20px;
+  padding: 20px;
   left: 300px;
   margin-top: 20px;
 }
@@ -119,23 +112,21 @@ padding: 20px;
 }
 
 .forecast-dates {
- color: var(--primary-color);
-  text-shadow:  0.3px  0.3px 0 #020202;
+  color: var(--primary-color);
+  text-shadow: 0.3px 0.3px 0 #020202;
 }
 
 .forecast-temp-min {
- color:var(--primary-color);
- font-size: smaller;
- text-shadow:  0.3px  0.3px 0 #020202;
- 
+  color: var(--primary-color);
+  font-size: smaller;
+  text-shadow: 0.3px 0.3px 0 #020202;
 }
 
 .forecast-temp-max {
-   font-size: smaller;
+  font-size: smaller;
 }
 
 .col-2 {
   font-size: 20px;
   text-align: center;
 }
-
